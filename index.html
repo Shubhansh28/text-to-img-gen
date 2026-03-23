@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI-powered image generator using text prompts. Create stunning images from your imagination.">
+    <title>AI Image Generator — Text to Image</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">✦</span>
+                    <h1>ImagiGen</h1>
+                </div>
+                <p class="tagline">Transform your words into stunning visuals</p>
+            </div>
+        </header>
+
+        <!-- Chat Area -->
+        <main class="chat-container" id="chatContainer">
+            <div class="chat-messages" id="chatMessages">
+                <!-- Welcome message -->
+                <div class="message bot-message welcome-message">
+                    <div class="message-avatar">
+                        <span>✦</span>
+                    </div>
+                    <div class="message-content">
+                        <div class="message-bubble">
+                            <p class="welcome-title">Welcome to ImagiGen!</p>
+                            <p>Describe any image you can imagine, and I'll create it for you using AI. Try something like:</p>
+                            <div class="suggestion-chips">
+                                <button class="chip" onclick="useSuggestion(this)">A sunset over snow-capped mountains</button>
+                                <button class="chip" onclick="useSuggestion(this)">Cyberpunk city at night with neon lights</button>
+                                <button class="chip" onclick="useSuggestion(this)">A cat wearing a space suit on Mars</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Input Area -->
+        <footer class="input-container">
+            <div class="input-wrapper">
+                <div class="input-bar">
+                    <input
+                        type="text"
+                        id="promptInput"
+                        placeholder="Describe the image you want to generate..."
+                        autocomplete="off"
+                    >
+                    <button id="sendBtn" onclick="handleSend()" title="Generate Image">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </div>
+                <p class="input-hint">Press Enter to generate · Powered by Hugging Face</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
