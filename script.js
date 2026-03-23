@@ -1,5 +1,5 @@
 // ===== Configuration =====
-const API_URL = "/api/generate";
+const API_URL = "/.netlify/functions/generate";
 
 // ===== DOM Elements =====
 const chatMessages = document.getElementById("chatMessages");
